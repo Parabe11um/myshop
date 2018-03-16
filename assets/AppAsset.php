@@ -20,9 +20,34 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'css/font-awesome.css',
+        'fonts/themify/themify-icons.css',
+        'fonts/Linearicons-Free-v1.0.0/icon-font.min.css',
+        'fonts/elegant-font/html-css/style.css',
+        'css/animate.css',
+        'css/hamburgers.min.css',
+        'css/animsition.css',
+        'css/select2.css',
+        'css/daterangepicker.css',
+        'css/slick.css',
+        'css/lightbox.css',
         'css/site.css',
+        'css/main.css',
+        'css/util.css',
     ];
+
     public $js = [
+//        'js/jquery-3.2.1.min.js',
+        'js/animsition.js',
+//        'js/popper.js',
+//        'js/bootstrap.js',
+//        'js/select2.js',
+        'js/slick.js',
+        'js/slick-custom.js',
+        'js/lightbox.js',
+        'js/main.js',
+
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

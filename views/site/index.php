@@ -1,53 +1,101 @@
-<?php
+<!-- Content -->
+<section class="banner bgwhite p-t-40 p-b-40">
 
-/* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+    <div class="container">
+        <h2 class="title-header">Category</h2>
+        <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+            <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
+                <!-- block1 -->
+                <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <img src="images/banner-02.jpg" alt="IMG-BENNER">
+
+                    <div class="block1-wrapbtn w-size2">
+                        <!-- Button -->
+                        <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                            Dresses
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- block1 -->
+                <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <img src="images/banner-05.jpg" alt="IMG-BENNER">
+
+                    <div class="block1-wrapbtn w-size2">
+                        <!-- Button -->
+                        <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                            Sunglasses
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+            <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
+                <!-- block1 -->
+                <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <img src="images/banner-03.jpg" alt="IMG-BENNER">
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                    <div class="block1-wrapbtn w-size2">
+                        <!-- Button -->
+                        <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                            Watches
+                        </a>
+                    </div>
+                </div>
+
+                <!-- block1 -->
+                <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <img src="images/banner-07.jpg" alt="IMG-BENNER">
+
+                    <div class="block1-wrapbtn w-size2">
+                        <!-- Button -->
+                        <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                            Footerwear
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+            <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
+                <!-- block1 -->
+                <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <img src="images/banner-04.jpg" alt="IMG-BENNER">
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                    <div class="block1-wrapbtn w-size2">
+                        <!-- Button -->
+                        <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                            Bags
+                        </a>
+                    </div>
+                </div>
+
+                <!-- block2 -->
+                <div class="block2 wrap-pic-w pos-relative m-b-30">
+                    <img src="images/icons/bg-01.jpg" alt="IMG">
+
+                    <div class="block2-content sizefull ab-t-l flex-col-c-m">
+                        <h4 class="m-text4 t-center w-size3 p-b-8">
+                            Sign up & get 20% off
+                        </h4>
+
+                        <p class="t-center w-size4">
+                            Be the frist to know about the latest fashion news and get exclu-sive offers
+                        </p>
+
+                        <div class="w-size2 p-t-25">
+                            <!-- Button -->
+                            <a href="#" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                                Sign Up
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
+</section>
