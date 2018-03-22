@@ -1,18 +1,19 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Capri
- * Date: 16.03.2018
- * Time: 0:53
+ * User: Andrey
+ * Date: 07.05.2016
+ * Time: 10:28
  */
 
 namespace app\models;
 use yii\db\ActiveRecord;
 
 
-class Category extends ActiveRecord {
+class Category extends ActiveRecord{
 
-    public static function tableName() {
+
+    public static function tableName(){
         return 'category';
     }
 

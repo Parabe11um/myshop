@@ -33,7 +33,15 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.mail.ru',
+                'username' => 'username',
+                'password' => 'password',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -49,6 +57,12 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'category/<id:\d+>/page/<page:\d+>' => 'category/view',
+                'category/<id:\d+>' => 'category/view',
+                'product/<id:\d+>' => 'product/view',
+                'search' => 'category/search',
+                'catalog' => 'catalog/index',
+                'category' => 'catalog/index',
             ],
         ],
     ],

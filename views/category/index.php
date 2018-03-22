@@ -1,14 +1,14 @@
 <!-- Content -->
-<?php
-$this->title = 'My Yii Application';
-use yii\helpers\Html;
 
+<?php
+use yii\helpers\Html;
+$this->title = 'My Yii Application';
 ?>
 
 <!-- Slide1 -->
 <section class="slide1">
     <div class="wrap-slick1">
-        <div class="slick1 ">
+        <div class="slick1">
             <div class="item-slick1 item1-slick1" style="background-image: url('/images/master-slide-02.jpg');">
                 <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
@@ -21,8 +21,8 @@ use yii\helpers\Html;
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
                         <!-- Button -->
-                        <a href="<?= \yii\helpers\Url::to(['/catalog']) ?>" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Подробнее
+                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+
                         </a>
                     </div>
                 </div>
@@ -39,9 +39,7 @@ use yii\helpers\Html;
 
                     <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
                         <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
+                        <a href="<?= \yii\helpers\Url::to(['/catalog']) ?>">Каталог</a>
                     </div>
                 </div>
             </div>
@@ -70,8 +68,7 @@ use yii\helpers\Html;
 <section class="banner bgwhite p-t-40 p-b-40">
     <div class="container">
         <h2 class="title-header">Категории</h2>
-        <div class="row">
-            <?= \app\components\MenuWidget::widget(['tpl' => 'menu'])?>
-
-    </div>
+        <ul class="catalog category-products p-b-54">
+            <?= \app\components\MenuWidget::widget(['tpl' => 'select'])?>
+        </ul>
 </section>

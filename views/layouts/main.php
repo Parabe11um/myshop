@@ -4,12 +4,14 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
 
-?>
-<?php $this->beginPage() ?>
+$this->beginPage() ?>
 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -28,11 +30,11 @@ AppAsset::register($this);
 <!-- Header -->
 <header class="header1" >
     <!-- Header desktop -->
-    <div class="container-menu-header">
+    <div class="container-menu-header ">
 
-        <div class="wrap_header">
+        <div class="wrap_header container">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="/images/icons/logo.png" alt="IMG-LOGO">
             </a>
 
@@ -40,48 +42,20 @@ AppAsset::register($this);
             <div class="wrap_menu">
                 <nav class="menu">
                     <ul class="main_menu">
-                        <li>
-                            <a href="index.html">Главная</a>
-                        </li>
-
-                        <li>
-                            <a href="product.html">Каталог</a>
-                            <ul class="sub_menu">
-                                <li><a href="index.html">Категория_1</a></li>
-                                <li><a href="home-02.html">Категория_2</a></li>
-                                <li><a href="home-03.html">Категория_3</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="sale-noti">
-                            <a href="product.html">Распродажа</a>
-                        </li>
-
-                        <li>
-                            <a href="cart.html">Новинки</a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">О нас</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Контакты</a>
-                        </li>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to(['/catalog']) ?>">Каталог</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to('about') ?>">О нас</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
 
             <!-- Header Icon -->
             <div class="header-icons">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-                </a>
-
+                <a href="#" class="header-wrapicon1 dis-block"><img src="/images/icons/icon-header-01.png" class="header-icon1" alt="ICON"></a>
                 <span class="linedivide1"></span>
-
                 <div class="header-wrapicon2">
-                    <img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="/images/icons/icon-header-02.png" onclick="return getCart()" class="header-icon1" alt="ICON">
                     <span class="header-icons-noti">0</span>
 
                     <!-- Header cart noti -->
@@ -91,15 +65,9 @@ AppAsset::register($this);
                                 <div class="header-cart-item-img">
                                     <img src="/images/item-cart-01.jpg" alt="IMG">
                                 </div>
-
                                 <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
+                                    <a href="#" class="header-cart-item-name">White Shirt With Pleat Detail Back</a>
+                                    <span class="header-cart-item-info">1 x $19.00</span>
                                 </div>
                             </li>
 
@@ -109,13 +77,9 @@ AppAsset::register($this);
                                 </div>
 
                                 <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
+                                    <a href="#" class="header-cart-item-name">Converse All Star Hi Black Canvas</a>
 
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
+                                    <span class="header-cart-item-info">1 x $39.00</span>
                                 </div>
                             </li>
 
@@ -338,76 +302,12 @@ AppAsset::register($this);
     </div>
 </header>
 
-<!-- Slide1 -->
-<section class="slide1">
-    <div class="wrap-slick1">
-        <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url('/images/master-slide-02.jpg');">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-							Women Collection 2018
-						</span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item2-slick1" style="background-image: url('/images/master-slide-03.jpg');">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-							Women Collection 2018
-						</span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item3-slick1" style="background-image: url('/images/master-slide-04.jpg');">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-							Women Collection 2018
-						</span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
-                        <!-- Button -->
-                        <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 <?= $content; ?>
 
 <!-- Footer -->
-<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-    <div class="flex-w p-b-90">
+<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45 ">
+    <div class="flex-w p-b-90 container">
         <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 p-b-30">
                 GET IN TOUCH
@@ -573,6 +473,9 @@ AppAsset::register($this);
     </div>
 </footer>
 
+
+
+
 <!-- Back to top -->
 <div class="btn-back-to-top bg0-hov" id="myBtn">
 		<span class="symbol-btn-back-to-top">
@@ -584,6 +487,19 @@ AppAsset::register($this);
 <div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
+
+<?php
+\yii\bootstrap\Modal::begin([
+    'header' => '<h2>Корзина</h2>',
+    'id' => 'cart',
+    'size' => 'modal-lg',
+    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+        <a href="' . \yii\helpers\Url::to(['cart/view']) . '" type="button" class="btn btn-success">Оформить заказ</a>
+        <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
+]);
+
+\yii\bootstrap\Modal::end();
+?>
 
 <?php $this->endBody() ?>
 <script type="text/javascript">

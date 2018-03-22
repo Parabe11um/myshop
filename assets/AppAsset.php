@@ -37,7 +37,7 @@ class AppAsset extends AssetBundle
     ];
 
     public $js = [
-//        'js/jquery-3.2.1.min.js',
+        'js/jquery-3.2.1.min.js',
         'js/animsition.js',
 //        'js/popper.js',
 //        'js/bootstrap.js',
@@ -45,7 +45,11 @@ class AppAsset extends AssetBundle
         'js/slick.js',
         'js/slick-custom.js',
         'js/lightbox.js',
+        'js/jquery.accordion.js',
+        'js/jquery.cookie.js',
         'js/main.js',
+        'js/menu.js',
+
 
 
     ];
